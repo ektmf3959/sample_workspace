@@ -22,6 +22,8 @@ public class Variable {
 	
 //		이력변경추가 2022.07.01 12:55 da
 		System.out.println("이력변경추가.");
+		
+//zz
 
 	}
 }
