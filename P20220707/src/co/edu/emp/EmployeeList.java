@@ -75,21 +75,43 @@ public class EmployeeList {
 	}//말일 정보.
 	private int getLastDate(int mon) {
 		switch(mon) {
+		case 4:
 		case 6:
+		case 9:
+		case 11:
 			return 30;
+		case 1:
+		case 3:
+		case 5:
 		case 7:
+		case 8:
+		case 10:
+		case 12:
 			return 31;
 		default:
-			return 30;
+			return 28;
 		}
 	}
 	//1일의 요일정보.
 	private int getDayInfo(int mon) {
 		switch(mon) {
+		case 8:
+			return 1;
+		case 2:
+		case 3:
+		case 11:	
+			return 2;
 		case 6:
 			return 3; // 첫째날 요일정보.
+		case 9:
+		case 12:	
+			return 4;
+		case 4:	
 		case 7:
 			return 5;
+		case 1:
+		case 10:	
+			return 6;
 		default:
 			return 0;
 		}
