@@ -15,9 +15,27 @@ public class BoardApp {
 			if (menu == 1) {
 				
 			} else if (menu == 2) {
-				add(); // 이름, 제목, 내용
-			} else if (menu == 3) {
+				int choice = 0;
+				System.out.println("이름을 입력하세요 > ");
+				String name = scn.nextLine();
+				System.out.println("제목을 입력하세요 > ");
+				String title = scn.nextLine();
+				System.out.println("내용을 입력하세요 > ");
+				String content = scn.nextLine();
 				
+				BoardDAO instance = BoardDAO.getInstance();
+				Board n1 = new Board(title,name,content);
+						
+				instance.add(n1);
+			
+			} else if (menu == 3) {
+				System.out.println("제목을 입력하세요 > ");
+				String title = scn.nextLine();
+				
+				BoardDAO instance = BoardDAO.getInstance();
+				Board n2 = new Board(title);
+						
+				instance.search(n2);
 			} else if (menu == 4) {
 
 			} else if (menu == 5) {
@@ -29,18 +47,18 @@ public class BoardApp {
 		}
 	}
 
-	private static void add() {
-		int choice = 0;
-		System.out.println("이름을 입력하세요 > ");
-		String name = scn.nextLine();
-		System.out.println("제목을 입력하세요 > ");
-		String title = scn.nextLine();
-		System.out.println("내용을 입력하세요 > ");
-		String content = scn.nextLine();
+//	private static void add() {
+//		int choice = 0;
+//		System.out.println("이름을 입력하세요 > ");
+//		String name = scn.nextLine();
+//		System.out.println("제목을 입력하세요 > ");
+//		String title = scn.nextLine();
+//		System.out.println("내용을 입력하세요 > ");
+//		String content = scn.nextLine();
 		
-		BoardDAO instance = BoardDAO.getInstance();
-		Board n1 = new Board(title,name,content);
+//		BoardDAO instance = BoardDAO.getInstance();
+//		Board n1 = new Board(title,name,content);
 				
-		instance.add(n1);
+//		instance.add(n1);
 	}
-}
+
